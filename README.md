@@ -1,6 +1,6 @@
 # svelte-transitions-fade
 
-Fade transition plugin for [Svelte](https://svelte.technology). [Demo](https://svelte.technology/repl?gist=9b657be565b1e080d39727a241829b11)
+Fade transition plugin for [Svelte](https://svelte.technology). [Demo](https://svelte.technology/repl?version=2.5.0&gist=0bd4023626fe4256472e209dcdfac39f)
 
 ![fade-hello](https://cloud.githubusercontent.com/assets/1162160/25777721/d32984aa-32b3-11e7-9312-2e4582b86926.gif)
 
@@ -21,10 +21,10 @@ Then add the plugin to your Svelte component's exported definition:
   <input type='checkbox' bind:checked='visible'> visible
 </label>
 
-{{#if visible}}
+{#if visible}
   <!-- use `in`, `out`, or `transition` (bidirectional) -->
   <div transition:fade>hello!</div>
-{{/if}}
+{/if}
 
 <script>
   import fade from 'svelte-transitions-fade';
