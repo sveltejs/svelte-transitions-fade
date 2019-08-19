@@ -40,11 +40,15 @@ Then add the plugin to your Svelte component's exported definition:
 
 ## Parameters
 
-You can specify `delay` and `duration` parameters, which default to `0` and `400` respectively:
+You can specify `delay`, `duration`, and `easing` parameters, which default to `0`, `400`, and `x => x` respectively:
 
 ```html
-<div in:fade='{delay: 250, duration: 1000}'>
-  fades in slowly after a short delay
+<script>
+  import { cubicInOut } from 'svelte/easing';
+</script>
+
+<div in:fade={{ delay: 250, duration: 1000, easing: cubicInOut }}>
+  fades in slowly after a short delay with cubic easing
 </div>
 ```
 

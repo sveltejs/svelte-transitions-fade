@@ -1,9 +1,9 @@
-export default function fade ( node, { delay = 0, duration = 400 } ) {
+export default function fade ( node, { delay = 0, duration = 400, easing = x => x } ) {
 	const o = +getComputedStyle( node ).opacity;
 
 	return {
 		delay,
 		duration,
-		css: t => `opacity: ${t * o}`
+		css: t => `opacity: ${easing(t) * o}`
 	};
 }
